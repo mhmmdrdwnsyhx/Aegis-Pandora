@@ -40,14 +40,6 @@ When your vault is compromised, it doesn’t panic—it *evaporates securely*.
 
 ---
 
-## 📱 Screenshots
-
-| Login UI (LiquidGlass Design) |
-|-------------------------------|
-| ![Login](./screenshots/LoginScreen.jpg) |
-
----
-
 ## 🛠️ Tech Stack
 
 - **Kotlin Multiplatform (KMP)**
