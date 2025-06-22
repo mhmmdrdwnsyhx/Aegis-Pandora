@@ -46,9 +46,4 @@ When your vault is compromised, it doesn’t panic—it *evaporates securely*.
 - Jetpack Compose / SwiftUI (planned)
 - Multiplatform Serialization
 - Secure Local Storage
-- Mock Email & Device Reboot Simulators
-
----
-
-## 📂 Project Structure
-
+- Mock Email & Device Reboot Simulator
