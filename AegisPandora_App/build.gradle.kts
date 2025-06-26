@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    //noinspection GradleDependency
     id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
 }
 
@@ -40,10 +39,11 @@ android {
 }
 
 dependencies {
-    implementation(projects.core)
-    implementation(libs.compose.ui)
-    implementation(libs.compose.ui.tooling.preview)
-    implementation(libs.compose.material3)
+    implementation(project(":core"))
+    implementation(libs.androidx.runtime)
+    implementation(libs.androidx.ui.v183)
+    implementation(libs.androidx.foundation.v160)
+    implementation(libs.androidx.material3.v120)
+    implementation(libs.androidx.ui.tooling.preview.v160)
     implementation(libs.androidx.activity.compose)
-    debugImplementation(libs.compose.ui.tooling)
 }
