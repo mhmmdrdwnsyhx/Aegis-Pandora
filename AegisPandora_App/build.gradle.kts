@@ -1,16 +1,16 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
 }
 
 android {
     namespace = "com.mhmmdrdwnsyhx.aegispandora.android"
-    compileSdk = 35
+    compileSdk = 36
+
     defaultConfig {
         applicationId = "com.mhmmdrdwnsyhx.aegispandora.android"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
     }
@@ -19,16 +19,22 @@ android {
         compose = true
     }
 
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.12"
+    }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -40,6 +46,7 @@ android {
 
 dependencies {
     implementation(project(":core"))
+    implementation(libs.jbcrypt)
     implementation(libs.androidx.runtime)
     implementation(libs.androidx.ui.v183)
     implementation(libs.androidx.foundation.v160)

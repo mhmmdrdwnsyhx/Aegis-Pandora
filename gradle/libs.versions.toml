@@ -3,6 +3,7 @@ activityCompose = "1.10.1"
 agp = "8.10.1"
 foundation = "1.6.0"
 foundationVersion = "1.8.3"
+jbcrypt = "0.4"
 kotlin = "2.0.0"
 compose = "1.5.4"
 compose-material3 = "1.1.2"
@@ -36,6 +37,7 @@ androidx-ui-tooling-preview-v160 = { module = "androidx.compose.ui:ui-tooling-pr
 androidx-ui-tooling-preview-v183 = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreviewVersion" }
 androidx-ui-v160 = { module = "androidx.compose.ui:ui", version.ref = "ui" }
 androidx-ui-v183 = { module = "androidx.compose.ui:ui", version.ref = "uiVersion" }
+jbcrypt = { module = "org.mindrot:jbcrypt", version.ref = "jbcrypt" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }

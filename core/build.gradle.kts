@@ -1,6 +1,6 @@
 plugins {
-    kotlin("multiplatform") version "2.0.0"
-    kotlin("plugin.serialization") version "2.0.0"
+    kotlin("multiplatform") version "1.9.23"
+    kotlin("plugin.serialization") version "1.9.23"
     id("com.android.library")
 }
 
@@ -21,7 +21,8 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(libs.kotlinx.serialization.json)
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.3")
                 implementation(libs.kotlinx.datetime.v040)
             }
         }
@@ -31,11 +32,21 @@ kotlin {
             }
         }
     }
+
+    jvm {
+        compilations.all {
+            kotlinOptions.jvmTarget = "1.8"
+        }
+    }
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions.jvmTarget = "1.8"
 }
 
 android {
-    namespace = "com.mhmmdrdrwnsyhx.aegispandora"
-    compileSdk = 35
+    namespace = "com.mhmmdrdwnsyhx.aegispandora"
+    compileSdk = 36
     defaultConfig {
         minSdk = 24
     }
@@ -44,7 +55,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     buildFeatures {
-        compose = true
+        compose = false
     }
 }
 
