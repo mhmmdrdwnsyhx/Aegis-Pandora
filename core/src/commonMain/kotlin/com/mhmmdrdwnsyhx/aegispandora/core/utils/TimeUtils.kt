@@ -1,2 +1,7 @@
 package com.mhmmdrdwnsyhx.aegispandora.core.utils
-expect fun getCurrentTimeMillis(): Long
+
+import kotlinx.datetime.Clock
+
+fun currentEpochSeconds(): Long {
+    return Clock.System.now().epochSeconds
+}
